@@ -7,6 +7,7 @@ import Interface.StringList;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.function.Supplier;
 
 public class StringListImpl implements StringList {
 

@@ -1,5 +1,7 @@
 package Interface;
 
+import java.util.function.Supplier;
+
 public interface StringList {
 
     // Добавление элемента.
