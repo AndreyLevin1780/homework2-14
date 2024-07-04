@@ -50,7 +50,6 @@ public class StringListImpl implements StringList {
         return item;
     }
 
-
     @Override
     public String set(int index, String item) {
         checkIsNull(item);

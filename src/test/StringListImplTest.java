@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 //import org.assertj.core.api.Assertions;
+import Exception.IncorrectIndexException;
+import Exception.ItemIsNullException;
 
 import java.sql.Array;
 import java.util.Arrays;
@@ -82,5 +84,16 @@ public class StringListImplTest {
     @Test
     public void indexOfTest() {
         assertEquals(1, testStringListImpl.indexOf("2"));
+    }
+
+    @Test
+    public void addNegativeTest() {
+        assertThrows(IncorrectIndexException.class, () -> testStringListImpl.add(5,"6") );
+        assertThrows(ItemIsNullException.class, () -> testStringListImpl.add(4,null));
+    }
+
+    @Test
+    public void removeNegativeTest() {
+        assertThrows(IncorrectIndexException.class, () -> testStringListImpl.remove(5));
     }
 }
